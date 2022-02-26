@@ -34,7 +34,7 @@ function LoginPage(props) {
     const login = () => {
 
         console.log(props);
-        props.history.push('/navigationbar')
+        props.history.push('/navigationbar/mainpage')
 
     }
     return (
