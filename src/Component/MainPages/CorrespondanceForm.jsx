@@ -1,24 +1,24 @@
-import { Button, Grid,  TextField } from '@mui/material';
+import { Button, Grid, TextField } from '@mui/material';
 import * as yup from "yup";
 import React from 'react';
 import { useFormik } from 'formik';
 
 const validationSchema = yup.object({
     address1: yup
-    .string('Enter your Address')
-    .required('Address is required'),
-  address2: yup
-    .string('Enter your address'),
-  city: yup
-    .string('Enter your city')
-    .required('City is required'),
-  state: yup
-    .string('Enter your state')
-    .required('State is required'),
+        .string('Enter your Address')
+        .required('Address is required'),
+    address2: yup
+        .string('Enter your address'),
+    city: yup
+        .string('Enter your city')
+        .required('City is required'),
+    state: yup
+        .string('Enter your state')
+        .required('State is required'),
 
-  zip: yup
-    .string('Enter your zip')
-    .required('Zip is required'),
+    zip: yup
+        .string('Enter your zip')
+        .required('Zip is required'),
 
 });
 

@@ -15,11 +15,11 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData(1,'Tom', 'CEO','Done','Ranveer'),
-  createData(2,'Steela', 'Sales Manager','Pending','Deepika'),
-  createData(3,'John', 'HR', 'Done','Ranveer'),
-  createData(5,'Derver', 'Marketing Department', 'Pending','Steeve'),
-  createData(4,'Elena', 'Finance Head', 'Done','Ranveer'),
+  createData(1, 'Tom', 'CEO', 'Done', 'Ranveer'),
+  createData(2, 'Steela', 'Sales Manager', 'Pending', 'Deepika'),
+  createData(3, 'John', 'HR', 'Done', 'Ranveer'),
+  createData(5, 'Derver', 'Marketing Department', 'Pending', 'Steeve'),
+  createData(4, 'Elena', 'Finance Head', 'Done', 'Ranveer'),
 ];
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

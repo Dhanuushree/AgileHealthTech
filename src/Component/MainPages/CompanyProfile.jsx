@@ -51,15 +51,15 @@ export default function BasicGrid() {
     onSubmit: () => {
       handleeditSave1()
     },
-    
+
   });
-  
+
 
   const handleeditSave1 = () => {
     if (!compare) { setcompare(true); setchange(!"disabled") }
     else { setcompare(false); setchange("disabled") }
   }
-  
+
   return (
     <Box >
       <Grid container >
@@ -130,11 +130,11 @@ export default function BasicGrid() {
           </Item>
           <br></br>
           <Item>
-            <CorrespondanceForm/>
+            <CorrespondanceForm />
           </Item>
           <br></br>
           <Item>
-            <BillingForm/>
+            <BillingForm />
           </Item>
         </Grid>
 

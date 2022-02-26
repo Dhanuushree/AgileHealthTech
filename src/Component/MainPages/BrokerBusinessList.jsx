@@ -15,11 +15,11 @@ function createData(name, LineOfBusiness, Status, CoOrdinator) {
 }
 
 const rows = [
-  createData( 'Tom', 'CEO', 'Done', 'Ranveer'),
-  createData( 'Steela', 'Sales Manager', 'Pending', 'Deepika'),
-  createData( 'John', 'HR', 'Done', 'Ranveer'),
-  createData( 'Derver', 'Marketing Department', 'Pending', 'Steeve'),
-  createData( 'Elena', 'Finance Head', 'Done', 'Ranveer'),
+  createData('Tom', 'CEO', 'Done', 'Ranveer'),
+  createData('Steela', 'Sales Manager', 'Pending', 'Deepika'),
+  createData('John', 'HR', 'Done', 'Ranveer'),
+  createData('Derver', 'Marketing Department', 'Pending', 'Steeve'),
+  createData('Elena', 'Finance Head', 'Done', 'Ranveer'),
 ];
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
