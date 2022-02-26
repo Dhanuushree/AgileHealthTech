@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MainPage() {
+export default function MainPage() {
   return (
     <div>
       <h1 className='mt-10'>
@@ -9,5 +9,3 @@ function MainPage() {
     </div>
   )
 }
-
-export default MainPage

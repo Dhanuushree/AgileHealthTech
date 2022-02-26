@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { Button, TextField } from '@mui/material';
+import { Button, Grid, TextField } from '@mui/material';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { withRouter } from 'react-router-dom';
@@ -17,8 +17,8 @@ function LoginPage(props) {
             .required('Email is required'),
         password: yup
             .string('Enter your Password')
-            .min(8, 'Password should be of minimum 8 characters length')
-            .max(20, 'Password too long, should not exceed 20 characters')
+            .min(8, 'Password should be of minimum 8')
+            .max(20, 'should not exceed 20 characters')
             .required('Password is required'),
     });
     const formik = useFormik({
@@ -39,55 +39,68 @@ function LoginPage(props) {
     }
     return (
         <>
-            <Box sx={{
-                maxWidth: "26vw", ml: "35vw", mr: "35vw", mt: "15vh", maxHeight: "45vh", boxShadow: 15, bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
-                color: (theme) => theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800', '& .MuiTextField-root': { m: "2vh" },
-            }}>
-                <form onSubmit={formik.handleSubmit}>
-                    <Card variant="outlined">
-                        <CardContent>
+            <Grid container >
+                <Grid item xs={4}>
 
-                            <Typography gutterBottom sx={{ ml: "1vw", mr: "3vm" }}>
-                                <TextField
-                                    label="UserName"
-                                    size="small"
-                                    sx={{ width: "20vw" }}
-                                    id="email"
-                                    name="email"
-                                    value={formik.values.email}
-                                    onChange={formik.handleChange}
-                                    error={formik.touched.email && Boolean(formik.errors.email)}
-                                    helperText={formik.touched.email && formik.errors.email}
-                                />
+                </Grid>
+                <Grid item xs={4} sx={{ mt: '24vh' }}>
 
-                            </Typography>
-                            <Typography sx={{ ml: "1vw" }} color="text.secondary">
-                                <TextField
-                                    label="PassWord"
-                                    id="password"
-                                    size="small"
-                                    sx={{ width: "20vw" }}
-                                    name="password"
-                                    type="password"
-                                    value={formik.values.password}
-                                    onChange={formik.handleChange}
-                                    error={formik.touched.password && Boolean(formik.errors.password)}
-                                    helperText={formik.touched.password && formik.errors.password}
-                                />
+                    <Box sx={{
+                        boxShadow: 20, bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                        color: (theme) => theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800', '& .MuiTextField-root': { m: "2vh" },
+                    }}
+                    >
+                        <form onSubmit={formik.handleSubmit}>
+                            <Card variant="outlined" sx={2}>
+                                <CardContent>
 
-                            </Typography>
-                            <Button
-                                variant="contained"
-                                sx={{ ml: "9vw", mr: "3vm" }}
-                                color="success"
-                                type="submit"
-                            >
-                                Log In
-                            </Button>
-                        </CardContent>
-                    </Card>
-                </form>
-            </Box>
+                                    <Typography gutterBottom sx={1}>
+                                        <TextField
+                                            label="Email"
+                                            size="medium"
+                                            sx={{ width: "90%" }}
+                                            id="email"
+                                            name="email"
+                                            value={formik.values.email}
+                                            onChange={formik.handleChange}
+                                            error={formik.touched.email && Boolean(formik.errors.email)}
+                                            helperText={formik.touched.email && formik.errors.email}
+                                        />
+
+                                    </Typography>
+                                    <Typography sx={1} color="text.secondary">
+                                        <TextField
+                                            label="Password"
+                                            id="password"
+                                            size="medium"
+                                            sx={{ width: "90%" }}
+                                            name="password"
+                                            type="password"
+                                            value={formik.values.password}
+                                            onChange={formik.handleChange}
+                                            error={formik.touched.password && Boolean(formik.errors.password)}
+                                            helperText={formik.touched.password && formik.errors.password}
+                                        />
+
+                                    </Typography>
+                                    <Button
+                                        variant="contained"
+                                        sx={4}
+                                        color="success"
+                                        type="submit"
+                                    >
+                                        Log In
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </form>
+                    </Box>
+
+                </Grid>
+                <Grid item xs={4}>
+
+                </Grid>
+            </Grid>
         </>
     );
 }
