@@ -10,8 +10,8 @@ import { Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 
-function createData(name, calories, fat, carbs) {
-  return { name, calories, fat, carbs };
+function createData(companyName, lineOfBusiness, status, coOrdinator) {
+  return { companyName, lineOfBusiness, status, coOrdinator };
 }
 
 const rows = [
@@ -36,10 +36,10 @@ export default function customerlist() {
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Company Name</TableCell>
-                <TableCell align="right">Line Of Business </TableCell>
-                <TableCell align="right">Status</TableCell>
-                <TableCell align="right">Co Ordinator</TableCell>
+                <TableCell  align="center">Company Name</TableCell>
+                <TableCell align="center">Line Of Business </TableCell>
+                <TableCell align="center">Status</TableCell>
+                <TableCell align="center">Co Ordinator</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -48,12 +48,10 @@ export default function customerlist() {
                   key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="right">{row.calories}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
-                  <TableCell align="right">{row.carbs}</TableCell>
+                <TableCell component="th"  align="center" scope="row">{row.companyName}</TableCell>
+                  <TableCell align="center">{row.lineOfBusiness}</TableCell>
+                  <TableCell align="center">{row.status}</TableCell>
+                  <TableCell align="center">{row.coOrdinator}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

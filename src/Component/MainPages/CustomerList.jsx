@@ -10,8 +10,8 @@ import { Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(entityType,name, lineOfBusiness, status, bussinessOwner) {
+  return {entityType, name, lineOfBusiness, status, bussinessOwner };
 }
 
 const rows = [
@@ -36,11 +36,11 @@ export default function customerlist() {
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Entity Type</TableCell>
-                <TableCell align="right">Name</TableCell>
-                <TableCell align="right">Line Of Bussiness</TableCell>
-                <TableCell align="right">Status</TableCell>
-                <TableCell align="right">Bussiness Owner</TableCell>
+                <TableCell  align="center">Entity Type</TableCell>
+                <TableCell align="center">Name</TableCell>
+                <TableCell align="center">Line Of Bussiness</TableCell>
+                <TableCell align="center">Status</TableCell>
+                <TableCell align="center">Bussiness Owner</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -49,13 +49,11 @@ export default function customerlist() {
                   key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="right">{row.calories}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
-                  <TableCell align="right">{row.carbs}</TableCell>
-                  <TableCell align="right">{row.protein}</TableCell>
+                  <TableCell component="th"  align="center" scope="row">{row.entityType}</TableCell>
+                  <TableCell component="th"align="center" scope="row">{row.name}</TableCell>
+                  <TableCell align="center">{row.lineOfBusiness}</TableCell>
+                  <TableCell align="center">{row.status}</TableCell>
+                  <TableCell align="center">{row.bussinessOwner}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

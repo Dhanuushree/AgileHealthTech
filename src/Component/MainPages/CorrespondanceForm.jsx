@@ -18,6 +18,8 @@ const validationSchema = yup.object({
 
     zip: yup
         .string('Enter your zip')
+        .min(6, 'invailed zip')
+        .max(6, 'invailed Zip')
         .required('Zip is required'),
 
 });

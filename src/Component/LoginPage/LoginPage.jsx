@@ -8,7 +8,6 @@ import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { withRouter } from 'react-router-dom';
 
-
 function LoginPage(props) {
     const validationSchema = yup.object({
         email: yup
@@ -32,10 +31,7 @@ function LoginPage(props) {
         },
     });
     const login = () => {
-
-        console.log(props);
         props.history.push('/navigationbar/mainpage')
-
     }
     return (
         <>
@@ -43,16 +39,13 @@ function LoginPage(props) {
                 <Grid item xs={1} sm={3} md={4}  lg={4.5}>
                 </Grid>
                 <Grid item  xs={10} sm={6} md={4}  lg={3} sx={{ mt: '24vh' }}>
-
                     <Box sx={{
                         boxShadow: 20, bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
                         color: (theme) => theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800', '& .MuiTextField-root': { m: "2vh" },
-                    }}
-                    >
+                    }}>
                         <form onSubmit={formik.handleSubmit}>
                             <Card variant="outlined" sx={2}>
                                 <CardContent>
-
                                     <Typography gutterBottom sx={1}>
                                         <TextField
                                             label="Email"
@@ -63,9 +56,7 @@ function LoginPage(props) {
                                             value={formik.values.email}
                                             onChange={formik.handleChange}
                                             error={formik.touched.email && Boolean(formik.errors.email)}
-                                            helperText={formik.touched.email && formik.errors.email}
-                                        />
-
+                                            helperText={formik.touched.email && formik.errors.email} />
                                     </Typography>
                                     <Typography xs={1} color="text.secondary">
                                         <TextField
@@ -78,16 +69,14 @@ function LoginPage(props) {
                                             value={formik.values.password}
                                             onChange={formik.handleChange}
                                             error={formik.touched.password && Boolean(formik.errors.password)}
-                                            helperText={formik.touched.password && formik.errors.password}
-                                        />
+                                            helperText={formik.touched.password && formik.errors.password} />
 
                                     </Typography>
                                     <Button
                                         variant="contained"
-                                        sx={{ml:'30%'}}
+                                        sx={{ml:'37%'}}
                                         color="success"
-                                        type="submit"
-                                    >
+                                        type="submit">
                                         Log In
                                     </Button>
                                 </CardContent>
@@ -95,7 +84,7 @@ function LoginPage(props) {
                         </form>
                     </Box>
                 </Grid>
-                <Grid item xs={1} sm={3} md={4}  lg={4}>
+                <Grid item xs={1} sm={3} md={4} lg={4}>
                 </Grid>
             </Grid>
         </>
