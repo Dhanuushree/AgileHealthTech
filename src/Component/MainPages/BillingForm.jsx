@@ -50,7 +50,7 @@ export default function BillingForm() {
                 <Grid item xs={4}>
                     <h3><u>Billing Address</u></h3>
                 </Grid>
-                <Grid item xs={7} >
+                <Grid item sm={5} md={6.5} xs={4.5} >
                 </Grid>
                 <Grid item xs={1}>
                     {!compare ?

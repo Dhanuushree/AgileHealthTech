@@ -67,9 +67,7 @@ export default function BasicGrid() {
           <Item>
             <form onSubmit={formik.handleSubmit}>
               <Grid container   >
-                <Grid item xs={4}>
-                </Grid>
-                <Grid item xs={7} >
+              <Grid item sm={9} md={10.5} xs={8.5} >
                 </Grid>
                 <Grid item xs={1}>
                   {!compare ?
@@ -137,7 +135,6 @@ export default function BasicGrid() {
             <BillingForm />
           </Item>
         </Grid>
-
       </Grid>
     </Box>
   );

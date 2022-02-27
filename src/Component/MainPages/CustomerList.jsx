@@ -31,7 +31,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function customerlist() {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}>
+            <Grid item sm={12} md={12} xs={12} >
         <Item> <TableContainer component={Paper}>
           <Table aria-label="simple table">
             <TableHead>

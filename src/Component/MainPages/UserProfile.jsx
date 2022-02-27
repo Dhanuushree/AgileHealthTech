@@ -64,10 +64,8 @@ export default function BasicGrid() {
         <Grid item xs={12}>
           <Item>
             <form onSubmit={formik.handleSubmit}>
-              <Grid container   >
-                <Grid item xs={4}>
-                </Grid>
-                <Grid item xs={7} >
+              <Grid container>
+              <Grid item sm={9} md={10.5} xs={8.5} >
                 </Grid>
                 <Grid item xs={1}>
                   {!compare ?

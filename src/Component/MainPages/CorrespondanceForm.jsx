@@ -48,10 +48,10 @@ export default function CorrespondanceForm() {
     return (
         <div><form onSubmit={formik.handleSubmit}>
             <Grid container   >
-                <Grid item xs={4}>
+                <Grid item sm={4} xs={4.5}>
                     <h3><u>Correspondance Address</u></h3>
                 </Grid>
-                <Grid item xs={7} >
+                <Grid item sm={5} md={6.5} xs={4} >
                 </Grid>
                 <Grid item xs={1}>
                     {!compare ?
