@@ -34,16 +34,15 @@ function LoginPage(props) {
     const login = () => {
 
         console.log(props);
-        props.history.push('/navigationbar')
+        props.history.push('/navigationbar/mainpage')
 
     }
     return (
         <>
             <Grid container >
-                <Grid item xs={4}>
-
+                <Grid item xs={1} sm={3} md={4}  lg={4.5}>
                 </Grid>
-                <Grid item xs={4} sx={{ mt: '24vh' }}>
+                <Grid item  xs={10} sm={6} md={4}  lg={3} sx={{ mt: '24vh' }}>
 
                     <Box sx={{
                         boxShadow: 20, bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
@@ -68,7 +67,7 @@ function LoginPage(props) {
                                         />
 
                                     </Typography>
-                                    <Typography sx={1} color="text.secondary">
+                                    <Typography xs={1} color="text.secondary">
                                         <TextField
                                             label="Password"
                                             id="password"
@@ -85,7 +84,7 @@ function LoginPage(props) {
                                     </Typography>
                                     <Button
                                         variant="contained"
-                                        sx={4}
+                                        sx={{ml:'30%'}}
                                         color="success"
                                         type="submit"
                                     >
@@ -95,10 +94,8 @@ function LoginPage(props) {
                             </Card>
                         </form>
                     </Box>
-
                 </Grid>
-                <Grid item xs={4}>
-
+                <Grid item xs={1} sm={3} md={4}  lg={4}>
                 </Grid>
             </Grid>
         </>

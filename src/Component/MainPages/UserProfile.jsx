@@ -20,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const validationSchema = yup.object({
   firstName: yup
     .string('Enter your First Name')
-    .min(8, 'minimum 8 characters')
+    .min(3, 'minimum 3 characters')
     .max(20, 'should not exceed 20 characters')
     .required(' Name is required'),
   lastName: yup

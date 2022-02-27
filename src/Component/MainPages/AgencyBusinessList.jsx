@@ -17,8 +17,8 @@ function createData(name, calories, fat, carbs) {
 const rows = [
   createData('IBM', 'CEO', 'Done', 'Ranveer'),
   createData('Google', 'Sales Manager', 'Pending', 'Deepika'),
-  createData('Microsoft', 'HR', 'Done', 'Ranveer'),
   createData('Dell', 'Marketing Department', 'Pending', 'Steeve'),
+  createData('Microsoft', 'HR', 'Done', 'Ranveer'),
   createData('Lenovo', 'Finance Head', 'Done', 'Ranveer'),
 ];
 const Item = styled(Paper)(({ theme }) => ({

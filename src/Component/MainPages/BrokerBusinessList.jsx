@@ -16,8 +16,8 @@ function createData(name, LineOfBusiness, Status, CoOrdinator) {
 
 const rows = [
   createData('Tom', 'CEO', 'Done', 'Ranveer'),
-  createData('Steela', 'Sales Manager', 'Pending', 'Deepika'),
   createData('John', 'HR', 'Done', 'Ranveer'),
+  createData('Steela', 'Sales Manager', 'Pending', 'Deepika'),
   createData('Derver', 'Marketing Department', 'Pending', 'Steeve'),
   createData('Elena', 'Finance Head', 'Done', 'Ranveer'),
 ];
